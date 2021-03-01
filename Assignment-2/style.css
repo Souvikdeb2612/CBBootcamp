@@ -1,0 +1,27 @@
+h1{
+    font-size: 40px;
+    text-align: center;
+    background-color: white;
+    color: #064E3B;
+    position: sticky;
+    top: 0px;
+}
+div{
+    font-size: 30px;
+    align-items: center;
+    background-color: #064E3B;
+    color: white;
+    border: 1px solid black;
+    position: sticky;
+    top: 50px;
+    padding-left: 20px;
+}
+ul{
+    font-size: 20px;
+}
+fieldset{
+    background-color: #A7F3D0;
+}
+ul{
+    list-style: none;
+}
