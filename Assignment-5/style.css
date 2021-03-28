@@ -1,0 +1,33 @@
+.body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+.me-auto{
+    margin-right: 0 !important;
+    margin-left: auto;
+}
+
+
+.navbar{
+    border-bottom-left-radius: 15px;
+    padding: 20px;
+}
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: 2rem;
+        font-size: 1.2rem;
+    }
+}
+
+.img-fluid{
+    max-width: 25%;
+    display: block;
+    margin: auto;
+    padding: 100px 0 50px 0;
+}
+
+.bg-light{
+    background-color: #e9ecef!important;
+}
