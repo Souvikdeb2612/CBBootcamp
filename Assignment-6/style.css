@@ -1,26 +1,103 @@
 * {
     margin: 0;
     padding: 0;
-  }
-  
-  section {
-    width: 360px;
-    border: 2px solid #ccc;
-    margin: 50px auto;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  li {
-    border: 1px solid gray;
-    padding: 5px;
-    cursor: pointer;
+    text-align: center;
   }
 
-  section ul button{
-      color: blue;
-      width: 1100px;
-      border: 10px solid
+  body{
+    background-image: linear-gradient(120deg, #e2c35d,#d88771);
+  }  
+  section {
+    width: 360px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content:center;
   }
+  
+
+  h1{
+    padding: 90px 0 10px 0;
+    font-family: monospace;
+    font-size:3rem;
+  }
+/*   
+  li {
+    padding: 5px;
+  } */
+  section input{
+    padding: 1rem;
+    border: none;
+    background: white;
+    width: 30vw;
+  }
+
+  .btn{
+      padding: 0.45rem;
+      color:#d88771;
+      border:none;
+      background:white;
+      cursor: pointer;
+      transition: all ease 0.3s;
+      font-size:1rem;
+  }
+
+  .btn:hover{
+      color:white;
+      background:#d88771;
+  }
+
+  input,.trash,.edit,.btn:focus{
+    outline: none !important;
+}
+.table{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+#todo-list{
+  width:30%;
+  list-style:none;
+}
+
+.todo{
+  margin:0.5rem;
+  background: white;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.todo li{
+  flex: 1;
+}
+
+.edit{
+  color:#d88771;
+  background:white;
+  border:none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size:1rem;
+  transition: all ease 0.3s;
+}
+.trash{
+  background:#d88771;
+  color:white;
+  border:none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size:1rem;
+  transition: all ease 0.3s;
+}
+
+.trash:hover{
+  background:white;
+  color:#d88771;
+}
+.edit:hover{
+  color:white;
+  background:#d88771;
+}
+
+
+
