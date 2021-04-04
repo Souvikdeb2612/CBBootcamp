@@ -1,4 +1,13 @@
 const searchForm = document.getElementById('searchForm');
+const display=document.getElementsByClassName('display');
+const error=document.getElementsByClassName('error');
+const input = document.getElementById('search');
+const city_name=document.querySelector('.name');
+const curr_temp=document.querySelector('.temp');
+const min_temp=document.querySelector('.minTemp');
+const max_temp=document.querySelector('.maxTemp');
+const vis=document.querySelector('.visibility');
+
 
 
 
@@ -15,18 +24,37 @@ const getData = async(searchText)=>{
         })
         .then(parsedData=>{
             console.log(parsedData);
-            const cityName=console.log(parsedData.name);
-            const currTemp=console.log(parsedData.main.temp-273.15);
-            const minTemp=console.log(parsedData.main.temp_min-273.15);
-            const maxTemp=console.log(parsedData.main.temp_max-273.15);
-            const visibility=console.log(parsedData.visibility/1000);
+            const cityName=parsedData.name;
+            
+
+            if(cityName===undefined){
+                city_name.innerHTML='City Not Found';
+                curr_temp.innerHTML='';
+                min_temp.innerHTML='';
+                max_temp.innerHTML='';
+                vis.innerHTML='';
+            }
+            else{
+                city_name.innerHTML=cityName;
+                const currTemp=(parsedData.main.temp-273.15).toFixed(2);
+                const minTemp=(parsedData.main.temp_min-273.15).toFixed(2);
+                const maxTemp=(parsedData.main.temp_max-273.15).toFixed(2);
+                const visibility=parsedData.visibility/1000;
+                curr_temp.innerHTML=`Current Temperature : ${currTemp}&#176; C`;
+                min_temp.innerHTML=`Min Temperature : ${minTemp}&#176; C`;
+                max_temp.innerHTML=`Max Temperature : ${maxTemp}&#176; C`;
+                vis.innerHTML=`Visibility : ${visibility}KM`;
+            }
+            
+            
         })
         .catch(err=>{
             console.log('Error');
             console.log(err);
+            
         })
+    
 }
-
 
 
 searchForm.addEventListener('submit', (e)=>{
@@ -34,4 +62,6 @@ searchForm.addEventListener('submit', (e)=>{
     const searchText=searchForm.elements[0].value;
 
     getData(searchText)
+    input.value=" ";
 } )
+

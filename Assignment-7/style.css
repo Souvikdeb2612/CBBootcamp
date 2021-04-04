@@ -2,7 +2,7 @@
 
 :root{
     --primary-color:#7C3AED;
-    --dark-color:#6B7280;
+    --dark-color:#111827;
     --offwhite-color:#F3F4F6;
     --hover-color: #EDE9FE;
     --primary-hover: #5B21B6;
@@ -16,6 +16,9 @@ html {
 body{
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
+    background-image: url('https://images.unsplash.com/photo-1500674425229-f692875b0ab7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container{
@@ -23,15 +26,22 @@ body{
     text-align: center;
 }
 
-h1{
+nav{
+    padding-top:1px;
+    font-size: 1.5rem;
+    background-color: rgba(17, 24, 39, 0.5);
+}
+h1,h3{
+    text-align: center;
     padding-bottom:10px;
-    color: var(--primary-hover);
+    color: var(--offwhite-color);
 }
 
 .container input{
     border: 2px solid var(--dark-color);
-    padding: 5px;
+    padding: 15px;
     border-radius: 15px;
+    width: 40vw;
 }
 
 .container input:focus{
@@ -39,18 +49,25 @@ h1{
 }
 
 .container  button{
-    color: var(--primary-color);
+    color: var(--offwhite-color);
     cursor: pointer;
     padding-left:5px;
     background:none;
     border:none;
     font-size:1.2rem;
+    transition: all 0.3s;
 }
 
 .container button:hover{
-    color: var(--primary-hover)
+    color: var(--dark-color)
 }
 
 .container button:focus{
     outline: none;
+}
+
+.display{
+    text-align: center;
+    color: var(--dark-color);
+    font-weight: bold;
 }
